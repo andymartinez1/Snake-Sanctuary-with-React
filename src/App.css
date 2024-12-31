@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Oriya:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --color-primary: #5daa43;
+  --color-primary-lighter: #83cf66;
+  --color-primary-darker: #59a129;
+  --color-secondary: #fa7c4b;
+  --color-secondary-lighter: #fbb800;
+  --color-secondary-darker: #9e6050;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif Oriya", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 6rem;
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.nav__logo {
+  height: 8rem;
+  transition: all 0.3s;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 4rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--color-secondary);
+}
+
+.nav__link--btn:link,
+.nav__link--btn:visited {
+  padding: 0.8rem 2.5rem;
+  border-radius: 3rem;
+  background-color: var(--color-primary);
+  color: #222;
+}
+
+.nav__link--btn:hover,
+.nav__link--btn:active {
+  color: inherit;
+  background-color: var(--color-secondary);
+}
+
+/* HEADER */
+.header {
+  height: 90vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(126, 213, 111, 0.3),
+      rgba(40, 180, 133, 0.3)
+    ),
+    url(/src/assets/img/Jungle.jpg);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title {
+  max-width: 200rem;
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.header__title h1 {
+  font-size: 7.5rem;
+  color: #fff;
+  line-height: 1.35;
+}
+
+.btn--text {
+  margin: 5rem auto;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 25rem;
+  height: 5rem;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  opacity: 90%;
+  color: #fff;
+}
+
+/* INVENTORY SECTION */
+.inventory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inventory__header {
+  margin-top: 25px;
+  font-size: 4rem;
+  line-height: 1.35;
+}
+
+.inventory__snakes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.inventory__snake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+
+  & img {
+    height: 100px;
+    width: 100px;
+  }
+}
